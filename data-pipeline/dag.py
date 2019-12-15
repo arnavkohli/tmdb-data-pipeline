@@ -13,9 +13,9 @@ from email import encoders
 
 
 EMAIL_DETAILS = {
-    'fromaddr' : 'freelance.arnav@gmail.com',
-    'pwd' : 'qWeRtYuIoP10', # if using gmail, please head to myaccount.google.com/lesssecureapps and enable the option
-    'toaddr' : 'arnavkohli@gmail.com'
+    'fromaddr' : 'SENDER_EMAIL',
+    'pwd' : 'SENDER_PASSWORD', # if using gmail, please head to myaccount.google.com/lesssecureapps and enable the option
+    'toaddr' : 'RECEIVER_EMAIL'
 }
 
 args = {
