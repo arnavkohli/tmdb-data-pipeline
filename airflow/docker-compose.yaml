@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  tmdb-data-pipeline:
+    build: .
+    container_name: tmdb-data-pipeline
+    ports:
+      - "8089:8089"
+    environment:
+      - SENDER_EMAIL=example@gmail.com
+      - SENDER_PASSWORD=example
+      - RECEIVER_EMAIL=test@gmail.com

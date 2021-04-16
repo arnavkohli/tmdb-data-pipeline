@@ -1,3 +1,5 @@
+import os
+
 import airflow
 from airflow.models import DAG
 from airflow.operators.python_operator import PythonOperator
@@ -13,9 +15,9 @@ from email import encoders
 
 
 EMAIL_DETAILS = {
-    'fromaddr' : 'SENDER_EMAIL',
-    'pwd' : 'SENDER_PASSWORD', # if using gmail, please head to myaccount.google.com/lesssecureapps and enable the option
-    'toaddr' : 'RECEIVER_EMAIL'
+    'fromaddr' : os.getenv('SENDER_EMAIL'),
+    'pwd' : os.getenv('SENDER_PASSWORD'), # if using gmail, please head to myaccount.google.com/lesssecureapps and enable the option
+    'toaddr' : os.getenv('RECEIVER_EMAIL')
 }
 
 args = {
